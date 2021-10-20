@@ -35,10 +35,11 @@ class BookCrudController extends AbstractCrudController
             BooleanField::new('IsReserved'),
             TextField::new('imageFile')->setFormType(VichImageType::class)->hideOnIndex(),
             ImageField::new('file')->setBasePath('/uploads/books/')->onlyOnIndex(),
-            SlugField::new('slug')->setTargetFieldName('name'),
+            SlugField::new('slug')->setTargetFieldName('title'),
             AssociationField::new('category'),
         ];
     }
+
 
     /*
     public function configureFields(string $pageName): iterable

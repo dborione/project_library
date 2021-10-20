@@ -8,7 +8,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-//use App\Entity\Book;
+use App\Entity\Book;
 
 class DashboardController extends AbstractDashboardController
 {
