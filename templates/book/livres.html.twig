@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Catalogue{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        {% for book in books %}
+            <div class="col-sm-4">
+                <div class="card mb-3 col">
+                    <h3 class="card-header">{{ book.Title }}</h3>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ book.Author }}</h5>
+                        <h6 class="card-subtitle text-muted">Publication date</h6>
+                        {% for category in book.category %}
+                        <h6><button type="button" class="btn btn-outline-light">{{ category.name }}</button></h6>
+                        {% endfor %}
+                    </div>
+                    <img src={{ vich_uploader_asset(book, 'imageFile') }} class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">{{ book.Description }}</p>
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="btn btn-primary" type:"button">Réserver</a>
+                    </div>
+                </div>
+            </div>
+         {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
