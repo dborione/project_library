@@ -32,7 +32,7 @@ class CategoryBooksFixtures extends Fixture
                 $book->setTitle($faker->words(3, true));
                 $book->setAuthor($faker->name());
                 $book->setDescription($faker->text());
-                $book->setPublishingDate($faker->dateTimeThisCentury());
+                $book->setPublishingDate($faker->dateTime());
                 $book->setFile('placeholder.jpg');
                 $book->setSlug($faker->slug);
                 $book->setIsBorrowed($faker->randomElement([true, false]));
