@@ -12,7 +12,7 @@
                     <h3 class="card-header">{{ book.Title }}</h3>
                     <div class="card-body">
                         <h5 class="card-title">{{ book.Author }}</h5>
-                        <h6 class="card-subtitle text-muted">Publication date</h6>
+                        <h6 class="card-subtitle text-muted">{{ book.publishingDate|date("m/d/Y") }}</h6>
                         {% for category in book.category %}
                         <h6><button type="button" class="btn btn-outline-light">{{ category.name }}</button></h6>
                         {% endfor %}

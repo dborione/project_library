@@ -29,10 +29,10 @@ class CategoryBooksFixtures extends Fixture
             for ($j=0; $j < 3; $j++){
                 $book = new Book();
         
-                $book->setTitle($faker->words(3, true));
+                $book->setTitle($faker->sentence(3, false));
                 $book->setAuthor($faker->name());
                 $book->setDescription($faker->text());
-                $book->setPublishingDate($faker->dateTimeThisCentury());
+                $book->setPublishingDate($faker->dateTime());
                 $book->setFile('placeholder.jpg');
                 $book->setSlug($faker->slug);
                 $book->setIsBorrowed($faker->randomElement([true, false]));
