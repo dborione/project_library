@@ -7,28 +7,32 @@
     <html>
         <head>
             <title>{{ title }}</title>
+            {% block javascripts %}
+                {{ encore_entry_script_tags('app') }}
+            {% endblock %}
         </head>
 
         <body>
             <h1>{{ title }}</h1>
+            
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <a href="/login" class="btn btn-secondary" type:"button" >S'inscrire</a>
+                        <a href="/login"><button class="button1">S'inscrire</button></a>
                     </div>
                 </div>    
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <a href="/user_login" class="btn btn-success" type:"button" >Se connecter</a>
+                        <a href="/login"><button class="button2">Se connecter</button></a>
                     </div>
                 </div>    
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <a href="/staff_login" class="btn btn-primary" type:"button" >Espace employé</a>
+                        <a href="/staff_login"><button class="button3">Espace employé</button></a>
                     </div>
                 </div>    
             </div>

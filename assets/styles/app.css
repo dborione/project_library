@@ -1,0 +1,98 @@
+body > * + * {
+    margin-block-start: 2.5rem;
+}
+
+body {
+    background-color:#001D3D ;
+}
+
+.button1 {
+    --background: #FFC300; 
+}
+
+.button2 {
+    --background: #FFD60A; 
+}
+
+.button3 {
+    --background: #003566; 
+}
+
+.navbar {
+    color: #000814; 
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    list-style: none;
+}
+
+button {
+    --top: 50%;
+    --left: 50%;
+    --size: 100%;
+    
+    --color: hsl(265, 100%, 100%);
+    /* :p */
+    --border: none;
+    color: var(--color);
+    background: var(--background);
+    border: 1px solid var(--border);
+    font-family: inherit;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    overflow: hidden;
+    position: relative;
+    outline: none;
+    }
+   
+button svg {
+    width: 1em;
+    height: auto;
+    display: inline-block;
+    margin-inline-end: 0.2rem;
+}
+
+
+button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: currentColor;
+    border-radius: inherit;
+    opacity: 0;
+}
+
+button:focus:before,
+button:hover:before {
+    opacity: 0.1;
+}
+
+button:after {
+    content: "";
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    transform: translate(-50%, -50%);
+    width: var(--size);
+    height: var(--size);
+    background: currentColor;
+    clip-path: circle(0%);
+    opacity: 0.3;
+    border-radius: inherit;
+}
+
+button:active:after {
+    clip-path: circle(100%);
+    opacity: 0;
+    transition: clip-path 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53), opacity 0.4s ease-in-out;
+    transition-delay: -0.1s, 0.5s;
+}
