@@ -27,7 +27,7 @@ class UserFixtures extends Fixture
         $user->setLastName($faker->lastName());
         $user->setFirstName($faker->FirstName());
         $user->setAddress("10 rue RueTest 45847 VilleTest");
-        $user->setBirthDate($faker->dateTime());
+        $user->setBirthDate("01/01/1990");
         $user->setPassword($this->passwordHasher->hashPassword(
             $user,
             "user123"
