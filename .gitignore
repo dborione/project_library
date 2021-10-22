@@ -18,3 +18,5 @@
 /phpunit.xml
 .phpunit.result.cache
 ###< phpunit/phpunit ###
+/public/uploads/books/*
+!/public/uploads/books/placeholder.jpg
