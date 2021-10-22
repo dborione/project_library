@@ -22,7 +22,7 @@
                         <p class="card-text">{{ book.Description }}</p>
                     </div>
                     <div class="card-body">
-                        <a href="#" class="btn btn-primary" type:"button">Réserver</a>
+                        <a href={{path('reservations_add', {'id': book.id})}} class="btn btn-primary" type:"button">Réserver</a>
                     </div>
                 </div>
             </div>

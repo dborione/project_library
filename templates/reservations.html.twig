@@ -1,0 +1,28 @@
+{# templates/default/connexion.html.twig #}
+{% extends 'base.html.twig' %}  
+{% block body %}  
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+
+        {% if items | length > 0 %}
+            <table class="table">
+                <tr>
+                    <th>Titre</th>
+                    <th>Quantité</th>
+                    <th></th>
+                </tr>
+            </table>
+        {% else %}
+            <h1>Vous n'avez pas de réservation en cours</h1>
+        {% endif %}
+
+    </body>
+</html>
+
+{% endblock %}
